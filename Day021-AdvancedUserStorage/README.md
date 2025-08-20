@@ -104,11 +104,12 @@ forge script script/DeployAdvancedUserStorage.s.sol --rpc-url $SEPOLIA_RPC_URL -
 │   ├── Types.sol                 # Centralized type definitions (structs, enums, errors)
 │   ├── Utils.sol                 # Internal helper functions (validation, address checks)
 │   ├── AdvancedUserStorage.sol   # Main contract with CRUD logic for user data
-│   ├── RejectETH.sol             # Rejects ETH to simulate failed withdrawals
+│  
 │
 └── test
     ├── AdvancedUserStorageTest.t.sol # Full test suite for AdvancedUserStorage.
     └── UtilsTest.t.sol             # Full test suite for Utils. 
+    ├── RejectETH.t.sol             # Rejects ETH to simulate failed withdrawals
 ```
 
 ## 📌 Contracts
@@ -119,7 +120,7 @@ forge script script/DeployAdvancedUserStorage.s.sol --rpc-url $SEPOLIA_RPC_URL -
 
 - AdvancedUserStorage.sol → Core CRUD functionality for user data.
 
-- RejectETH.sol → Simulates failed ETH transfers.
+- RejectETH.t.sol → Simulates failed ETH transfers.
 
 - AdvancedUserStorageTest.sol → Main test suite.
 
