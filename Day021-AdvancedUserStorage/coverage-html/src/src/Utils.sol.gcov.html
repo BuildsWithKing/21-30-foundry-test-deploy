@@ -1,0 +1,430 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - lcov.info - src/src/Utils.sol</title>
+  <link rel="stylesheet" type="text/css" href="../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../index.html">top level</a> - <a href="index.html">src/src</a> - Utils.sol<span style="font-size: 80%;"> (source / <a href="Utils.sol.func-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only">Hit</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">lcov.info</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">52</td>
+            <td class="headerCovTableEntry">52</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test Date:</td>
+            <td class="headerValue">2025-08-19 19:25:02</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">14</td>
+            <td class="headerCovTableEntry">14</td>
+          </tr>
+                  <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading">            Line data    Source code</pre>
+<pre class="source">
+<span id="L1"><span class="lineNum">       1</span>              : //SPDX-License-Identifier: MIT</span>
+<span id="L2"><span class="lineNum">       2</span>              : </span>
+<span id="L3"><span class="lineNum">       3</span>              : /// @title Utils for AdvancedUserStorage.</span>
+<span id="L4"><span class="lineNum">       4</span>              : /// @author MichealKing (@BuildsWithKing).</span>
+<span id="L5"><span class="lineNum">       5</span>              : /// @created on 14th of Aug, 2025.</span>
+<span id="L6"><span class="lineNum">       6</span>              : </span>
+<span id="L7"><span class="lineNum">       7</span>              : /// @notice Utility contract for advanced user storage. </span>
+<span id="L8"><span class="lineNum">       8</span>              : </span>
+<span id="L9"><span class="lineNum">       9</span>              : pragma solidity ^0.8.30;</span>
+<span id="L10"><span class="lineNum">      10</span>              : </span>
+<span id="L11"><span class="lineNum">      11</span>              : /// @notice Imports Types.sol. </span>
+<span id="L12"><span class="lineNum">      12</span>              : import {Types} from &quot;./Types.sol&quot;;</span>
+<span id="L13"><span class="lineNum">      13</span>              : </span>
+<span id="L14"><span class="lineNum">      14</span>              : contract Utils is Types {</span>
+<span id="L15"><span class="lineNum">      15</span>              : </span>
+<span id="L16"><span class="lineNum">      16</span>              : // ------------------------------ Custom errors ------------------------------------------</span>
+<span id="L17"><span class="lineNum">      17</span>              : </span>
+<span id="L18"><span class="lineNum">      18</span>              : /// @dev Thrown when a user tries to perform only owner operation.</span>
+<span id="L19"><span class="lineNum">      19</span>              : error Unauthorized();</span>
+<span id="L20"><span class="lineNum">      20</span>              : </span>
+<span id="L21"><span class="lineNum">      21</span>              : /// @dev Thrown when user/owner tries to perform operation while contract is not active. </span>
+<span id="L22"><span class="lineNum">      22</span>              : error Inactive();</span>
+<span id="L23"><span class="lineNum">      23</span>              : </span>
+<span id="L24"><span class="lineNum">      24</span>              : /// @dev Thrown when an existing user tries to register.</span>
+<span id="L25"><span class="lineNum">      25</span>              : error AlreadyRegistered();</span>
+<span id="L26"><span class="lineNum">      26</span>              : </span>
+<span id="L27"><span class="lineNum">      27</span>              : /// @dev Thrown when user tries to update full name with previous full name. </span>
+<span id="L28"><span class="lineNum">      28</span>              : error SameName();</span>
+<span id="L29"><span class="lineNum">      29</span>              : </span>
+<span id="L30"><span class="lineNum">      30</span>              : /// @dev Thrown when user tries to update age with previous age. </span>
+<span id="L31"><span class="lineNum">      31</span>              : error SameAge();</span>
+<span id="L32"><span class="lineNum">      32</span>              : </span>
+<span id="L33"><span class="lineNum">      33</span>              : /// @dev Thrown when user tries to update gender with previous gender. </span>
+<span id="L34"><span class="lineNum">      34</span>              : error SameGender();</span>
+<span id="L35"><span class="lineNum">      35</span>              : </span>
+<span id="L36"><span class="lineNum">      36</span>              : /// @dev Thrown when user tries to update email with previous email. </span>
+<span id="L37"><span class="lineNum">      37</span>              : error SameEmail();</span>
+<span id="L38"><span class="lineNum">      38</span>              : </span>
+<span id="L39"><span class="lineNum">      39</span>              : /// @dev Thrown when user tries to update skill with previous skill.</span>
+<span id="L40"><span class="lineNum">      40</span>              : error SameSkill();</span>
+<span id="L41"><span class="lineNum">      41</span>              : </span>
+<span id="L42"><span class="lineNum">      42</span>              : /// @dev Thrown for blank name field.</span>
+<span id="L43"><span class="lineNum">      43</span>              : error EmptyName();</span>
+<span id="L44"><span class="lineNum">      44</span>              : </span>
+<span id="L45"><span class="lineNum">      45</span>              : /// @dev Thrown for blank age. </span>
+<span id="L46"><span class="lineNum">      46</span>              : error ZeroAge();</span>
+<span id="L47"><span class="lineNum">      47</span>              : </span>
+<span id="L48"><span class="lineNum">      48</span>              : /// @dev Thrown for age above 120. </span>
+<span id="L49"><span class="lineNum">      49</span>              : error Above120();</span>
+<span id="L50"><span class="lineNum">      50</span>              : </span>
+<span id="L51"><span class="lineNum">      51</span>              : /// @dev Thrown for blank gender field.</span>
+<span id="L52"><span class="lineNum">      52</span>              : error UnsetGender();</span>
+<span id="L53"><span class="lineNum">      53</span>              : </span>
+<span id="L54"><span class="lineNum">      54</span>              : /// @dev Thrown for blank email address field.</span>
+<span id="L55"><span class="lineNum">      55</span>              : error EmptyEmail();</span>
+<span id="L56"><span class="lineNum">      56</span>              : </span>
+<span id="L57"><span class="lineNum">      57</span>              : /// @dev Thrown for blank skill field.</span>
+<span id="L58"><span class="lineNum">      58</span>              : error EmptySkill();</span>
+<span id="L59"><span class="lineNum">      59</span>              : </span>
+<span id="L60"><span class="lineNum">      60</span>              : /// @dev Thrown when non-registered user tries to perform an operation.</span>
+<span id="L61"><span class="lineNum">      61</span>              : error NotRegistered();</span>
+<span id="L62"><span class="lineNum">      62</span>              : </span>
+<span id="L63"><span class="lineNum">      63</span>              : /// @dev Thrown when contract deployer tries to activate already active contract. </span>
+<span id="L64"><span class="lineNum">      64</span>              : error AlreadyActive();</span>
+<span id="L65"><span class="lineNum">      65</span>              : </span>
+<span id="L66"><span class="lineNum">      66</span>              : /// @dev Thrown when contract deployer tries to deactivate inactive contract. </span>
+<span id="L67"><span class="lineNum">      67</span>              : error AlreadyInactive();</span>
+<span id="L68"><span class="lineNum">      68</span>              : </span>
+<span id="L69"><span class="lineNum">      69</span>              : /// @dev Thrown when owner tries to send ETH while balance is zero.</span>
+<span id="L70"><span class="lineNum">      70</span>              : error NoFunds();</span>
+<span id="L71"><span class="lineNum">      71</span>              : </span>
+<span id="L72"><span class="lineNum">      72</span>              : /// @dev Thrown when ethAmount is greater than zero.</span>
+<span id="L73"><span class="lineNum">      73</span>              : error BalanceTooLow();</span>
+<span id="L74"><span class="lineNum">      74</span>              : </span>
+<span id="L75"><span class="lineNum">      75</span>              : /// @dev Thrown when owner's withdrawal fails.</span>
+<span id="L76"><span class="lineNum">      76</span>              : error WithdrawFailed();</span>
+<span id="L77"><span class="lineNum">      77</span>              : </span>
+<span id="L78"><span class="lineNum">      78</span>              : // --------------------------- Variable assignment ----------------------------------------------</span>
+<span id="L79"><span class="lineNum">      79</span>              : </span>
+<span id="L80"><span class="lineNum">      80</span>              :     /// @notice Contract deployer's address.</span>
+<span id="L81"><span class="lineNum">      81</span>              :     address immutable owner;</span>
+<span id="L82"><span class="lineNum">      82</span>              : </span>
+<span id="L83"><span class="lineNum">      83</span>              :     /// @notice Records contract state. </span>
+<span id="L84"><span class="lineNum">      84</span>              :     ContractState internal state;</span>
+<span id="L85"><span class="lineNum">      85</span>              : </span>
+<span id="L86"><span class="lineNum">      86</span>              :      /// @notice Users max age. </span>
+<span id="L87"><span class="lineNum">      87</span>              :     uint8 constant MAX_AGE = 120;</span>
+<span id="L88"><span class="lineNum">      88</span>              : </span>
+<span id="L89"><span class="lineNum">      89</span>              :     /// @notice Records total registered users. </span>
+<span id="L90"><span class="lineNum">      90</span>              :     uint256 internal userCount;</span>
+<span id="L91"><span class="lineNum">      91</span>              : </span>
+<span id="L92"><span class="lineNum">      92</span>              :     /// @dev Maps user's address to index. </span>
+<span id="L93"><span class="lineNum">      93</span>              :     mapping(address =&gt; uint256) internal userIndex;</span>
+<span id="L94"><span class="lineNum">      94</span>              : </span>
+<span id="L95"><span class="lineNum">      95</span>              :     /// @notice Records users address. </span>
+<span id="L96"><span class="lineNum">      96</span>              :     address[] internal userAddresses;</span>
+<span id="L97"><span class="lineNum">      97</span>              : </span>
+<span id="L98"><span class="lineNum">      98</span>              :     /// @dev Maps user's address to their data.</span>
+<span id="L99"><span class="lineNum">      99</span>              :     mapping(address =&gt; Data) internal userData;</span>
+<span id="L100"><span class="lineNum">     100</span>              : </span>
+<span id="L101"><span class="lineNum">     101</span>              : // ------------------------------------- Events --------------------------------------------------</span>
+<span id="L102"><span class="lineNum">     102</span>              : </span>
+<span id="L103"><span class="lineNum">     103</span>              :     /// @notice Emits NewUser.</span>
+<span id="L104"><span class="lineNum">     104</span>              :     /// @param userAddress New user address.</span>
+<span id="L105"><span class="lineNum">     105</span>              :     /// @param name New user name.</span>
+<span id="L106"><span class="lineNum">     106</span>              :     /// @param age New user age.</span>
+<span id="L107"><span class="lineNum">     107</span>              :     /// @param gender New user gender.</span>
+<span id="L108"><span class="lineNum">     108</span>              :     /// @param skill New user skill.</span>
+<span id="L109"><span class="lineNum">     109</span>              :     event NewUser(address indexed userAddress, string name, uint8 age, Gender gender, string skill);</span>
+<span id="L110"><span class="lineNum">     110</span>              : </span>
+<span id="L111"><span class="lineNum">     111</span>              :     /// @notice Emits FullNameUpdated.</span>
+<span id="L112"><span class="lineNum">     112</span>              :     /// @param userAddress The user's address.</span>
+<span id="L113"><span class="lineNum">     113</span>              :     /// @param newFullName The user's new name.</span>
+<span id="L114"><span class="lineNum">     114</span>              :     event FullNameUpdated(address indexed userAddress, string newFullName);</span>
+<span id="L115"><span class="lineNum">     115</span>              :     </span>
+<span id="L116"><span class="lineNum">     116</span>              :     /// @notice Emits AgeUpdated. </span>
+<span id="L117"><span class="lineNum">     117</span>              :     /// @param userAddress The user's address.</span>
+<span id="L118"><span class="lineNum">     118</span>              :     /// @param newAge The user's new age.</span>
+<span id="L119"><span class="lineNum">     119</span>              :     event AgeUpdated(address indexed userAddress, uint8 newAge);</span>
+<span id="L120"><span class="lineNum">     120</span>              :     </span>
+<span id="L121"><span class="lineNum">     121</span>              :     /// @notice Emits GenderUpdated. </span>
+<span id="L122"><span class="lineNum">     122</span>              :     /// @param userAddress The user's address.</span>
+<span id="L123"><span class="lineNum">     123</span>              :     /// @param newGender The user's new gender.</span>
+<span id="L124"><span class="lineNum">     124</span>              :     event GenderUpdated(address indexed userAddress, Gender newGender);</span>
+<span id="L125"><span class="lineNum">     125</span>              : </span>
+<span id="L126"><span class="lineNum">     126</span>              :     /// @notice Emits EmailUpdated. </span>
+<span id="L127"><span class="lineNum">     127</span>              :     /// @param userAddress The user's address.</span>
+<span id="L128"><span class="lineNum">     128</span>              :     /// @param newEmail The user's new Email. </span>
+<span id="L129"><span class="lineNum">     129</span>              :     event EmailUpdated(address indexed userAddress, string newEmail);</span>
+<span id="L130"><span class="lineNum">     130</span>              : </span>
+<span id="L131"><span class="lineNum">     131</span>              :     /// @notice Emits SkillUpdated. </span>
+<span id="L132"><span class="lineNum">     132</span>              :     /// @param userAddress The user's address.</span>
+<span id="L133"><span class="lineNum">     133</span>              :     /// @param newSkill The user's new skill.</span>
+<span id="L134"><span class="lineNum">     134</span>              :     event SkillUpdated(address indexed userAddress, string newSkill);</span>
+<span id="L135"><span class="lineNum">     135</span>              : </span>
+<span id="L136"><span class="lineNum">     136</span>              :     /// @notice Emits UserDataDeleted.</span>
+<span id="L137"><span class="lineNum">     137</span>              :     /// @param deletedBy The address which deleted the data (owner / user)</span>
+<span id="L138"><span class="lineNum">     138</span>              :     /// @param deletedUser The user's address.</span>
+<span id="L139"><span class="lineNum">     139</span>              :     event UserDataDeleted(address indexed deletedBy, address indexed deletedUser);</span>
+<span id="L140"><span class="lineNum">     140</span>              : </span>
+<span id="L141"><span class="lineNum">     141</span>              :     /// @notice Emits EthSent.</span>
+<span id="L142"><span class="lineNum">     142</span>              :     /// @param userAddress The user's address.</span>
+<span id="L143"><span class="lineNum">     143</span>              :     /// @param ethAmount Amount of ETH sent. </span>
+<span id="L144"><span class="lineNum">     144</span>              :     event EthSent(address indexed userAddress, uint256 indexed ethAmount);</span>
+<span id="L145"><span class="lineNum">     145</span>              : </span>
+<span id="L146"><span class="lineNum">     146</span>              :     /// @notice Emits ContractActivated. </span>
+<span id="L147"><span class="lineNum">     147</span>              :     /// @param ownerAddress The owner's address. </span>
+<span id="L148"><span class="lineNum">     148</span>              :     event ContractActivated(address indexed ownerAddress);</span>
+<span id="L149"><span class="lineNum">     149</span>              :     </span>
+<span id="L150"><span class="lineNum">     150</span>              :     /// @notice Emits ContractDeactivated.  </span>
+<span id="L151"><span class="lineNum">     151</span>              :     /// @param ownerAddress The owner's address. </span>
+<span id="L152"><span class="lineNum">     152</span>              :     event ContractDeactivated(address indexed ownerAddress);</span>
+<span id="L153"><span class="lineNum">     153</span>              : </span>
+<span id="L154"><span class="lineNum">     154</span>              :     /// @notice Emits EthReceived.</span>
+<span id="L155"><span class="lineNum">     155</span>              :     /// @param senderAddress The sender's address.</span>
+<span id="L156"><span class="lineNum">     156</span>              :     /// @param ethAmount The amount of ETH received.</span>
+<span id="L157"><span class="lineNum">     157</span>              :     event EthReceived(address indexed senderAddress, uint256 ethAmount);</span>
+<span id="L158"><span class="lineNum">     158</span>              : </span>
+<span id="L159"><span class="lineNum">     159</span>              : // ------------------------------ Constructor ------------------------------------------------------</span>
+<span id="L160"><span class="lineNum">     160</span>              : </span>
+<span id="L161"><span class="lineNum">     161</span>              :     /// @notice Sets contract deployer as owner.</span>
+<span id="L162"><span class="lineNum">     162</span> <span class="tlaGNC tlaBgGNC">         140 :     constructor() {</span></span>
+<span id="L163"><span class="lineNum">     163</span> <span class="tlaGNC">         140 :         owner = msg.sender;</span></span>
+<span id="L164"><span class="lineNum">     164</span>              : </span>
+<span id="L165"><span class="lineNum">     165</span>              :         // Set Contract state to active once deployed. </span>
+<span id="L166"><span class="lineNum">     166</span> <span class="tlaGNC">         140 :         state = ContractState.Active;</span></span>
+<span id="L167"><span class="lineNum">     167</span>              :     }</span>
+<span id="L168"><span class="lineNum">     168</span>              : </span>
+<span id="L169"><span class="lineNum">     169</span>              : // -------------------------------- Modifiers ----------------------------------------------------</span>
+<span id="L170"><span class="lineNum">     170</span>              : </span>
+<span id="L171"><span class="lineNum">     171</span>              :    /// @dev Restricts access to only contract deployer.</span>
+<span id="L172"><span class="lineNum">     172</span> <span class="tlaGNC">          14 :     modifier onlyOwner() {</span></span>
+<span id="L173"><span class="lineNum">     173</span> <span class="tlaGNC">          14 :         if(msg.sender != owner) revert Unauthorized();</span></span>
+<span id="L174"><span class="lineNum">     174</span>              :         _;</span>
+<span id="L175"><span class="lineNum">     175</span>              :     }</span>
+<span id="L176"><span class="lineNum">     176</span>              : </span>
+<span id="L177"><span class="lineNum">     177</span>              :     /// @notice Restricts Access while contract is not active. </span>
+<span id="L178"><span class="lineNum">     178</span> <span class="tlaGNC">          51 :     modifier isActive() {</span></span>
+<span id="L179"><span class="lineNum">     179</span> <span class="tlaGNC">          51 :         if(state == ContractState.NotActive) revert Inactive();</span></span>
+<span id="L180"><span class="lineNum">     180</span>              :         _;</span>
+<span id="L181"><span class="lineNum">     181</span>              :     }</span>
+<span id="L182"><span class="lineNum">     182</span>              : </span>
+<span id="L183"><span class="lineNum">     183</span>              :     /// @notice Validates users. </span>
+<span id="L184"><span class="lineNum">     184</span>              :     /// @param _fullName The user's full name. </span>
+<span id="L185"><span class="lineNum">     185</span>              :     /// @param _age The user's age.</span>
+<span id="L186"><span class="lineNum">     186</span>              :     /// @param _gender The user's gender. </span>
+<span id="L187"><span class="lineNum">     187</span>              :     /// @param _email The user's email.</span>
+<span id="L188"><span class="lineNum">     188</span>              :     /// @param _skill The user's skill. </span>
+<span id="L189"><span class="lineNum">     189</span> <span class="tlaGNC">          46 :     modifier validateUser(</span></span>
+<span id="L190"><span class="lineNum">     190</span>              :         string memory _fullName,</span>
+<span id="L191"><span class="lineNum">     191</span>              :         uint8 _age,</span>
+<span id="L192"><span class="lineNum">     192</span>              :         Gender _gender, </span>
+<span id="L193"><span class="lineNum">     193</span>              :         string memory _email, </span>
+<span id="L194"><span class="lineNum">     194</span>              :         string memory _skill) {</span>
+<span id="L195"><span class="lineNum">     195</span>              : </span>
+<span id="L196"><span class="lineNum">     196</span>              :         // Ensure user's full name is not empty. </span>
+<span id="L197"><span class="lineNum">     197</span> <span class="tlaGNC">          46 :         if(bytes(_fullName).length == 0) revert EmptyName();</span></span>
+<span id="L198"><span class="lineNum">     198</span>              : </span>
+<span id="L199"><span class="lineNum">     199</span>              :         // Ensure user's age is not zero. </span>
+<span id="L200"><span class="lineNum">     200</span> <span class="tlaGNC">          44 :         if(_age == 0) revert ZeroAge();</span></span>
+<span id="L201"><span class="lineNum">     201</span>              : </span>
+<span id="L202"><span class="lineNum">     202</span>              :         // Ensure age is not above 120. </span>
+<span id="L203"><span class="lineNum">     203</span> <span class="tlaGNC">          42 :         if(_age &gt; MAX_AGE) revert Above120();</span></span>
+<span id="L204"><span class="lineNum">     204</span>              : </span>
+<span id="L205"><span class="lineNum">     205</span>              :         // Ensure User selects a gender. </span>
+<span id="L206"><span class="lineNum">     206</span> <span class="tlaGNC">          40 :         if(_gender == Gender.Unset) revert UnsetGender();</span></span>
+<span id="L207"><span class="lineNum">     207</span>              : </span>
+<span id="L208"><span class="lineNum">     208</span>              :         // Ensure user's email address is not empty. </span>
+<span id="L209"><span class="lineNum">     209</span> <span class="tlaGNC">          38 :         if(bytes(_email).length == 0) revert EmptyEmail();</span></span>
+<span id="L210"><span class="lineNum">     210</span>              : </span>
+<span id="L211"><span class="lineNum">     211</span>              :         // Ensure user's skill is not empty. </span>
+<span id="L212"><span class="lineNum">     212</span> <span class="tlaGNC">          36 :         if(bytes(_skill).length == 0) revert EmptySkill();</span></span>
+<span id="L213"><span class="lineNum">     213</span>              : </span>
+<span id="L214"><span class="lineNum">     214</span>              :             _;</span>
+<span id="L215"><span class="lineNum">     215</span>              :     }</span>
+<span id="L216"><span class="lineNum">     216</span>              : </span>
+<span id="L217"><span class="lineNum">     217</span>              :     /// @notice Ensures only registered users has access. </span>
+<span id="L218"><span class="lineNum">     218</span> <span class="tlaGNC">           6 :     modifier mustBeRegistered() {</span></span>
+<span id="L219"><span class="lineNum">     219</span>              :         // Prevent non-registered user from updating data. </span>
+<span id="L220"><span class="lineNum">     220</span> <span class="tlaGNC">           6 :         if(!userData[msg.sender].isRegistered) revert NotRegistered();</span></span>
+<span id="L221"><span class="lineNum">     221</span>              :         _;</span>
+<span id="L222"><span class="lineNum">     222</span>              :     }</span>
+<span id="L223"><span class="lineNum">     223</span>              : </span>
+<span id="L224"><span class="lineNum">     224</span>              :       /// @notice Ensures user is registered. </span>
+<span id="L225"><span class="lineNum">     225</span> <span class="tlaGNC">           6 :     modifier userMustBeRegistered(address _userAddress) {</span></span>
+<span id="L226"><span class="lineNum">     226</span>              : </span>
+<span id="L227"><span class="lineNum">     227</span>              :         // Revert with message when owner tries deleting or accessing non-registered user data.  </span>
+<span id="L228"><span class="lineNum">     228</span> <span class="tlaGNC">           6 :         if(!userData[_userAddress].isRegistered) revert NotRegistered();</span></span>
+<span id="L229"><span class="lineNum">     229</span>              :         _;</span>
+<span id="L230"><span class="lineNum">     230</span>              :     }</span>
+<span id="L231"><span class="lineNum">     231</span>              : </span>
+<span id="L232"><span class="lineNum">     232</span>              :     /// @notice Ensure user havent registered. </span>
+<span id="L233"><span class="lineNum">     233</span> <span class="tlaGNC">          34 :     modifier mustNotBeRegistered() {</span></span>
+<span id="L234"><span class="lineNum">     234</span>              :         // Prevent existing user from reregistering. </span>
+<span id="L235"><span class="lineNum">     235</span> <span class="tlaGNC">           2 :         if(userData[msg.sender].isRegistered) revert AlreadyRegistered();</span></span>
+<span id="L236"><span class="lineNum">     236</span>              :         _;</span>
+<span id="L237"><span class="lineNum">     237</span>              :     }</span>
+<span id="L238"><span class="lineNum">     238</span>              : // ------------------------------ Internal helper function --------------------------------------------</span>
+<span id="L239"><span class="lineNum">     239</span>              : </span>
+<span id="L240"><span class="lineNum">     240</span>              :     /// @notice Helper function for deleteMyData &amp; deleteUserData. </span>
+<span id="L241"><span class="lineNum">     241</span>              :     /// @param _userAddress The user's address. </span>
+<span id="L242"><span class="lineNum">     242</span> <span class="tlaGNC">           8 :     function _deleteUser(address _userAddress) internal {</span></span>
+<span id="L243"><span class="lineNum">     243</span>              : </span>
+<span id="L244"><span class="lineNum">     244</span>              :         // Get user position. </span>
+<span id="L245"><span class="lineNum">     245</span> <span class="tlaGNC">           8 :         uint256 index = userIndex[_userAddress];</span></span>
+<span id="L246"><span class="lineNum">     246</span>              : </span>
+<span id="L247"><span class="lineNum">     247</span>              :         // Get last index on userAddresses array.</span>
+<span id="L248"><span class="lineNum">     248</span> <span class="tlaGNC">           8 :         uint256 lastIndex = userAddresses.length;</span></span>
+<span id="L249"><span class="lineNum">     249</span>              : </span>
+<span id="L250"><span class="lineNum">     250</span>              :         // Get last user. </span>
+<span id="L251"><span class="lineNum">     251</span> <span class="tlaGNC">           8 :         address lastUser = userAddresses[lastIndex - 1];</span></span>
+<span id="L252"><span class="lineNum">     252</span>              : </span>
+<span id="L253"><span class="lineNum">     253</span>              :         // Move last element into deleted spot. </span>
+<span id="L254"><span class="lineNum">     254</span> <span class="tlaGNC">           8 :         userAddresses[index -1] = lastUser;</span></span>
+<span id="L255"><span class="lineNum">     255</span>              : </span>
+<span id="L256"><span class="lineNum">     256</span>              :         // Set last User index. </span>
+<span id="L257"><span class="lineNum">     257</span> <span class="tlaGNC">           8 :         userIndex[lastUser] = index;</span></span>
+<span id="L258"><span class="lineNum">     258</span>              : </span>
+<span id="L259"><span class="lineNum">     259</span>              :         // Remove last element. </span>
+<span id="L260"><span class="lineNum">     260</span> <span class="tlaGNC">           8 :         userAddresses.pop();</span></span>
+<span id="L261"><span class="lineNum">     261</span>              : </span>
+<span id="L262"><span class="lineNum">     262</span>              :         // Delete data of user's address</span>
+<span id="L263"><span class="lineNum">     263</span> <span class="tlaGNC">           8 :         delete userData[_userAddress];</span></span>
+<span id="L264"><span class="lineNum">     264</span>              : </span>
+<span id="L265"><span class="lineNum">     265</span>              :         // Reset user's index to zero. </span>
+<span id="L266"><span class="lineNum">     266</span> <span class="tlaGNC">           8 :         userIndex[_userAddress] = 0;</span></span>
+<span id="L267"><span class="lineNum">     267</span>              : </span>
+<span id="L268"><span class="lineNum">     268</span>              :         // Deduct one from userCount. </span>
+<span id="L269"><span class="lineNum">     269</span>              :         unchecked {</span>
+<span id="L270"><span class="lineNum">     270</span> <span class="tlaGNC">           8 :             userCount--;</span></span>
+<span id="L271"><span class="lineNum">     271</span>              :         }</span>
+<span id="L272"><span class="lineNum">     272</span>              :     }</span>
+<span id="L273"><span class="lineNum">     273</span>              : </span>
+<span id="L274"><span class="lineNum">     274</span>              : // ------------------------------ External read functions ---------------------------------------------</span>
+<span id="L275"><span class="lineNum">     275</span>              : </span>
+<span id="L276"><span class="lineNum">     276</span>              :     /// @notice Returns Contract current state. </span>
+<span id="L277"><span class="lineNum">     277</span>              :     /// @return Bool &quot;true&quot; or &quot;false&quot;. </span>
+<span id="L278"><span class="lineNum">     278</span> <span class="tlaGNC">           4 :     function isContractActive() external view returns(bool) {</span></span>
+<span id="L279"><span class="lineNum">     279</span>              : </span>
+<span id="L280"><span class="lineNum">     280</span>              :         // Return bool True or False. </span>
+<span id="L281"><span class="lineNum">     281</span> <span class="tlaGNC">           4 :         return state == ContractState.Active;</span></span>
+<span id="L282"><span class="lineNum">     282</span>              :     }</span>
+<span id="L283"><span class="lineNum">     283</span>              : </span>
+<span id="L284"><span class="lineNum">     284</span>              : // -----------------------------  Owner's external write functions ------------------------------------</span>
+<span id="L285"><span class="lineNum">     285</span>              : </span>
+<span id="L286"><span class="lineNum">     286</span>              :     /// @notice Only contract deployer can activate contract. </span>
+<span id="L287"><span class="lineNum">     287</span> <span class="tlaGNC">           3 :     function activateContract() external onlyOwner {</span></span>
+<span id="L288"><span class="lineNum">     288</span>              :         </span>
+<span id="L289"><span class="lineNum">     289</span>              :         // Revert with message, if contract is already active. </span>
+<span id="L290"><span class="lineNum">     290</span> <span class="tlaGNC">           2 :         if(state == ContractState.Active) revert AlreadyActive();</span></span>
+<span id="L291"><span class="lineNum">     291</span>              : </span>
+<span id="L292"><span class="lineNum">     292</span>              :         // Set contract state as Active.</span>
+<span id="L293"><span class="lineNum">     293</span> <span class="tlaGNC">           1 :         state = ContractState.Active;</span></span>
+<span id="L294"><span class="lineNum">     294</span>              : </span>
+<span id="L295"><span class="lineNum">     295</span>              :         // Emit event ContractActivated. </span>
+<span id="L296"><span class="lineNum">     296</span> <span class="tlaGNC">           1 :         emit ContractActivated(owner);</span></span>
+<span id="L297"><span class="lineNum">     297</span>              :     }</span>
+<span id="L298"><span class="lineNum">     298</span>              : </span>
+<span id="L299"><span class="lineNum">     299</span>              :     /// @notice Only contract deployer can deactivate contract. </span>
+<span id="L300"><span class="lineNum">     300</span> <span class="tlaGNC">           6 :     function deactivateContract() external onlyOwner {</span></span>
+<span id="L301"><span class="lineNum">     301</span>              : </span>
+<span id="L302"><span class="lineNum">     302</span>              :          // Revert with message, if contract is already inactive. </span>
+<span id="L303"><span class="lineNum">     303</span> <span class="tlaGNC">           5 :         if(state == ContractState.NotActive) revert AlreadyInactive();</span></span>
+<span id="L304"><span class="lineNum">     304</span>              : </span>
+<span id="L305"><span class="lineNum">     305</span>              :         // Set contract state as NotActive. </span>
+<span id="L306"><span class="lineNum">     306</span> <span class="tlaGNC">           4 :         state = ContractState.NotActive;</span></span>
+<span id="L307"><span class="lineNum">     307</span>              : </span>
+<span id="L308"><span class="lineNum">     308</span>              :         // Emit event ContractDeactivated. </span>
+<span id="L309"><span class="lineNum">     309</span> <span class="tlaGNC">           4 :         emit ContractDeactivated(owner);</span></span>
+<span id="L310"><span class="lineNum">     310</span>              :     }</span>
+<span id="L311"><span class="lineNum">     311</span>              : </span>
+<span id="L312"><span class="lineNum">     312</span>              :     /// @notice Only owner can send ETH.</span>
+<span id="L313"><span class="lineNum">     313</span>              :     /// @notice _userAddress The user's address. </span>
+<span id="L314"><span class="lineNum">     314</span>              :     /// @notice _ethAmount The amount of ETH. </span>
+<span id="L315"><span class="lineNum">     315</span> <span class="tlaGNC">           6 :     function withdrawETH(address _userAddress, uint256 _ethAmount) external onlyOwner isActive {</span></span>
+<span id="L316"><span class="lineNum">     316</span>              : </span>
+<span id="L317"><span class="lineNum">     317</span>              :         // Record contract balance. </span>
+<span id="L318"><span class="lineNum">     318</span> <span class="tlaGNC">           4 :         uint256 balance = address(this).balance;</span></span>
+<span id="L319"><span class="lineNum">     319</span>              : </span>
+<span id="L320"><span class="lineNum">     320</span>              :         // Revert with message if contract balance is equal to zero. </span>
+<span id="L321"><span class="lineNum">     321</span> <span class="tlaGNC">           4 :         if(balance == 0) revert NoFunds();</span></span>
+<span id="L322"><span class="lineNum">     322</span>              : </span>
+<span id="L323"><span class="lineNum">     323</span>              :         // Revert with message if ethAmount is greater than balance. </span>
+<span id="L324"><span class="lineNum">     324</span> <span class="tlaGNC">           3 :         if(_ethAmount &gt; balance) revert BalanceTooLow();</span></span>
+<span id="L325"><span class="lineNum">     325</span>              : </span>
+<span id="L326"><span class="lineNum">     326</span>              :         // Fund address. </span>
+<span id="L327"><span class="lineNum">     327</span> <span class="tlaGNC">           2 :         (bool success,) = payable(_userAddress).call{value: _ethAmount}(&quot;&quot;);</span></span>
+<span id="L328"><span class="lineNum">     328</span>              : </span>
+<span id="L329"><span class="lineNum">     329</span>              :         // Revert message if withdrawal fails. </span>
+<span id="L330"><span class="lineNum">     330</span> <span class="tlaGNC">           2 :         if(!success) {</span></span>
+<span id="L331"><span class="lineNum">     331</span>              : </span>
+<span id="L332"><span class="lineNum">     332</span> <span class="tlaGNC">           1 :             revert WithdrawFailed();</span></span>
+<span id="L333"><span class="lineNum">     333</span>              :         }</span>
+<span id="L334"><span class="lineNum">     334</span>              : </span>
+<span id="L335"><span class="lineNum">     335</span>              :         // Emit event EthWithdrawn. </span>
+<span id="L336"><span class="lineNum">     336</span> <span class="tlaGNC">           1 :         emit EthSent(_userAddress, _ethAmount);</span></span>
+<span id="L337"><span class="lineNum">     337</span>              :     }</span>
+<span id="L338"><span class="lineNum">     338</span>              : </span>
+<span id="L339"><span class="lineNum">     339</span>              : // ---------------------------- Receive &amp; fallback external functions ------------------------------</span>
+<span id="L340"><span class="lineNum">     340</span>              : </span>
+<span id="L341"><span class="lineNum">     341</span>              :     /// @notice Handles ETH transfer with no calldata.</span>
+<span id="L342"><span class="lineNum">     342</span> <span class="tlaGNC">           2 :     receive() external payable {</span></span>
+<span id="L343"><span class="lineNum">     343</span>              : </span>
+<span id="L344"><span class="lineNum">     344</span>              :         // Emits event EthReceived.</span>
+<span id="L345"><span class="lineNum">     345</span> <span class="tlaGNC">           2 :         emit EthReceived(msg.sender, msg.value);</span></span>
+<span id="L346"><span class="lineNum">     346</span>              :     }</span>
+<span id="L347"><span class="lineNum">     347</span>              : </span>
+<span id="L348"><span class="lineNum">     348</span>              :     /// @notice Handles ETH transfer with calldata.</span>
+<span id="L349"><span class="lineNum">     349</span> <span class="tlaGNC">           1 :     fallback() external payable {</span></span>
+<span id="L350"><span class="lineNum">     350</span>              : </span>
+<span id="L351"><span class="lineNum">     351</span>              :         // Emits event EthReceived. </span>
+<span id="L352"><span class="lineNum">     352</span> <span class="tlaGNC">           1 :         emit EthReceived(msg.sender, msg.value);</span></span>
+<span id="L353"><span class="lineNum">     353</span>              :     }</span>
+<span id="L354"><span class="lineNum">     354</span>              : }</span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.0-1</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>
