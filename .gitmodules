@@ -1,0 +1,6 @@
+[submodule "Day021B-ModularQuoteVault/lib/forge-std"]
+	path = Day021B-ModularQuoteVault/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "Day021B-ModularQuoteVault/lib/buildswithking-security"]
+	path = Day021B-ModularQuoteVault/lib/buildswithking-security
+	url = https://github.com/BuildsWithKing/buildswithking-security
