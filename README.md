@@ -29,7 +29,7 @@ Focus: Refactor previous projects, write *Foundry tests, deploy smart contracts 
 
 | *Day* | *Projects* | *Description* | *Links* |
 |---------|--------------|-----------------|-----------|
-| 021 | Project A — AdvancedUserStorage <br> Project B — QuoteVault | Store & update full user data with CRUD & Foundry tests <br> Favorite quote storage with event testing & validation | [A View](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day021-AdvancedUserStorage) <br> *Coming soon...* |
+| 021 | Project A — AdvancedUserStorage <br> Project B — ModularQuoteVault | Store & update full user data with CRUD & Foundry tests <br> Modular quote storage with full unit and fuzz testing | [A View](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day021-AdvancedUserStorage) <br> [B View](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day021B-ModularQuoteVault) |
 | 022 | Project A — TodoList <br> Project B — WhiteList | Add/remove/update tasks, enum status & tests <br> Address mapping with access control checks | *Coming soon...* <br> *Coming soon...* |
 | 023 | Project A — SimpleBank <br> Project B — DonationVault | Deposit/withdraw ETH, refactor, and edge-case tests <br> Public donations, onlyOwner withdrawals, reentrancy tests | *Coming soon...* <br> *Coming soon...* |
 | 024 | Project A — BasicKYC <br> Project B — VotingApp | User registration, verification, admin checks <br> Proposal creation, voting, tally validation & double-vote prevention | *Coming soon...* <br> *Coming soon...* |
