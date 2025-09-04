@@ -11,7 +11,7 @@ Focus: Refactor previous projects, write *Foundry tests, deploy smart contracts 
 ---
 > 🟢 New to Phase 2?  
 > Phase 2 focuses on testing, deployment, scripting, and production-level best practices.  
-> You’ll see the same projects from Days 1–20, but now *fully tested, verified, and refactored*.
+> You’ll see the same projects from Days 1–20, but now *refactored, fully tested, and verified*.
 ---
 > “Consistency + testing = mastery. I’m leveling up smart contract quality and deployment skills.”
 — Michealking 👑
@@ -51,7 +51,7 @@ Each folder represents a project, containing Solidity contracts, Foundry tests, 
 
 Day021-AdvancedUserStorage/ ├── AdvancedUserStorage.sol ├── AdvancedUserStorage.t.sol ├──DeployAdvancedUserStorage.s.sol └── README.md
 
-Day025-SimpleBank/ ├── SimpleBank.sol ├── SimpleBank.t.sol └── README.md
+Day023-SimpleBank/ ├── SimpleBank.sol ├── SimpleBank.t.sol └── README.md
 
 ...
 
