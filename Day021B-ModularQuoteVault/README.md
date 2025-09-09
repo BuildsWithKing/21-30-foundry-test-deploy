@@ -138,7 +138,7 @@ Built with 🔥 by [Michealking](github.com/BuildsWithKing)
 Part of my [30 Days of Solidity Challenge](https://github.com/BuildsWithKing/30-days-solidity-challenge)
 
 ## ✍️ Project Journey
-I dedicated 13 intense days building this project. I refactored, debugged, got stucked, felt frustrated at times but didnt give up, i kept reminding myself that i didnt come this far jsut to quit now.
+I dedicated 13 intense days building this project. I refactored, debugged, got stucked, felt frustrated at times but didnt give up, i kept reminding myself that i didnt come this far just to quit now.
 I gave it everything, and i'm so proud of this gem. it proves one thing **Consistency builds mastery** and **Mastery is the goal**. 
 
 --- 
