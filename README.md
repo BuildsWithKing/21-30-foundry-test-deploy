@@ -30,7 +30,7 @@ Focus: Refactor previous projects, write *Foundry tests, deploy smart contracts 
 | *Day* | *Projects* | *Description* | *Links* |
 |---------|--------------|-----------------|-----------|
 | 021 | Project A — AdvancedUserStorage <br> Project B — ModularQuoteVault | Store & update full user data with CRUD & Foundry tests <br> A highly modular and secure quote vault with user data and quote management, fully tested and deployed. | [A View](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day021-AdvancedUserStorage) <br> [B View](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day021B-ModularQuoteVault) |
-| 022 | Project A — TodoList <br> Project B — WhiteList | Add/remove/update tasks, enum status & tests <br> Address mapping with access control checks | *Coming soon...* <br> *Coming soon...* |
+| 022 | Project A — TodoListPlus <br> Project B — WhiteList | Add/remove/update tasks, enum status & tests <br> Address mapping with access control checks |[A View](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day022A-ToDoListPlus)  <br> *Coming soon...* |
 | 023 | Project A — SimpleBank <br> Project B — DonationVault | Deposit/withdraw ETH, refactor, and edge-case tests <br> Public donations, onlyOwner withdrawals, reentrancy tests | *Coming soon...* <br> *Coming soon...* |
 | 024 | Project A — BasicKYC <br> Project B — VotingApp | User registration, verification, admin checks <br> Proposal creation, voting, tally validation & double-vote prevention | *Coming soon...* <br> *Coming soon...* |
 | 025 | Project A — OwnershipManager <br> Project B — ProjectIdeaStorage | Ownership transfer logic & admin validation <br> Store & update project ideas; test CRUD & access control |*Coming soon...* <br> *Coming soon...* |
@@ -41,7 +41,7 @@ Focus: Refactor previous projects, write *Foundry tests, deploy smart contracts 
 | 030 | Capstone Project — Final Build | Combines patterns from all projects; full Foundry test suite, deployment & verification | *Coming soon...* |
 ---
 
-🧱 Progress: 1 / 10 projects done 
+🧱 Progress: 2 / 10 projects done 
 
 ---
 
