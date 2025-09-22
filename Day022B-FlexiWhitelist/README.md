@@ -13,7 +13,7 @@ This modular contract allows users to register to be whitelisted, unregister whe
 - [Project Structure](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day022B-FlexiWhitelist#-project-structure)
 - [Usage](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day022B-FlexiWhitelist#-usage)
 - [Contract Deployment](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day022B-FlexiWhitelist#-contract-deployment)
-- [Tools Used](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day022B-FlexiWhitelist#%E2%80%8D-tools-used)
+- [Tools Used](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day022B-FlexiWhitelist#-tools-used)
 - [Testing](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day022B-FlexiWhitelist#-testing)
 - [Local Development](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day022B-FlexiWhitelist#%E2%80%8D-local-development)
 - [Deployment](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day022B-FlexiWhitelist#deployment)
