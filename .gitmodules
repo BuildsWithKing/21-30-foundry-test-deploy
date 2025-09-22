@@ -10,3 +10,9 @@
 [submodule "Day022A-ToDoListPlus/lib/buildswithking-security"]
 	path = Day022A-ToDoListPlus/lib/buildswithking-security
 	url = https://github.com/BuildsWithKing/buildswithking-security
+[submodule "Day022B-FlexiWhitelist/lib/forge-std"]
+	path = Day022B-FlexiWhitelist/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "Day022B-FlexiWhitelist/lib/buildswithking-security"]
+	path = Day022B-FlexiWhitelist/lib/buildswithking-security
+	url = https://github.com/BuildsWithKing/buildswithking-security
