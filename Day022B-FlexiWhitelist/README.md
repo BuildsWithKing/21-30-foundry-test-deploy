@@ -7,8 +7,8 @@ This modular contract allows users to register to be whitelisted, unregister whe
 
 ### 📑 Table of Contents
 
-- [FlexiWhitelist (Day 22 Project B - 30 Days Of Solidity)](#flexiwhitelist-day-22-project-b---30-days-of-solidity)
-- [Features](#features)
+- [FlexiWhitelist (Day 22 Project B - 30 Days Of Solidity)](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day022B-FlexiWhitelist#flexiwhitelist-day-22-project-b---30-days-of-solidity-)
+- [Features](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day022B-FlexiWhitelist#-features)
 - [Project Summary](#project-summary)
 - [Project Structure](#project-structure)
 - [Usage](#usage)
