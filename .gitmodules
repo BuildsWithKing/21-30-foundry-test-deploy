@@ -16,3 +16,9 @@
 [submodule "Day022B-FlexiWhitelist/lib/buildswithking-security"]
 	path = Day022B-FlexiWhitelist/lib/buildswithking-security
 	url = https://github.com/BuildsWithKing/buildswithking-security
+[submodule "Day022A-SimpleBankX/lib/forge-std"]
+	path = Day022A-SimpleBankX/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "Day023A-SimpleBankX/lib/buildswithking-security"]
+	path = Day023A-SimpleBankX/lib/buildswithking-security
+	url = https://github.com/BuildsWithKing/buildswithking-security

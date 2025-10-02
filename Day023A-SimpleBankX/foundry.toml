@@ -1,0 +1,18 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+
+remappings = [
+    "buildswithking-security/=lib/buildswithking-security/contracts/"
+]
+
+[fuzz]
+runs = 20
+max_test_rejects = 100000  # Increase rejection limit
+seed = '0x1'
+dictionary_weight = 40
+include_storage = true
+include_push_bytes = true
+
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
