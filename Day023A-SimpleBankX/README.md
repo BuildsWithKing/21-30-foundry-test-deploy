@@ -20,7 +20,6 @@ This project demonstrates secure Solidity development practices including **cust
 - [Local Development](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day023A-SimpleBankX#%E2%80%8D-local-development)
 - [Deployment](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day023A-SimpleBankX#deployment)
 - [License](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day023A-SimpleBankX#-license)
-- [Audit-Lite](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day023A-SimpleBankX#-audit-lite)
 - [Author](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day023A-SimpleBankX#%E2%80%8D-author)
 - [Project Journey](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day023A-SimpleBankX#%EF%B8%8F-project-journey)
 
@@ -157,7 +156,7 @@ This project includes full unit, fuzz and invariant test coverage:
 - Receive and fallback behaviour
 
 ## Coverage: 100%
-![Coverage](screenshoot/coverage.png)
+![Coverage](screenshot/coverage.png)
 
 ## 👨‍💻 Local Development
 To run this project locally:
