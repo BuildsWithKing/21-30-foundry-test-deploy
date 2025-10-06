@@ -22,12 +22,11 @@ abstract contract Types {
     // ------------------------------------------------------- Enum ------------------------------------------------------
     /// @notice Defines users registration status.
     /// @dev 0 represents NotRegistered, 1 represents registered.
-
     enum RegistrationStatus {
         NotRegistered, // 0.
         Registered // 1.
-
     }
+    
     // ------------------------------------------------------- Mappings -------------------------------------------------
     /// @notice Maps user address to their registration status.
 
