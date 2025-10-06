@@ -1,3 +1,6 @@
+![Coverage](https://img.shields.io/badge/Coverage-100%25-brightgreen)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 # 💓 DonationVaultV2 (Day 23 Project B - 30 Days Of Solidity) 👑
 
 A modular vault contract built with security in mind, allows donors to donate ETH, view their donation status and balance, total ETH donated, and vault balance. Only King (contract deployer) can safely withdraw ETH donated, secured with reentrancy guard. 
@@ -221,3 +224,4 @@ Part of my [30 Days of Solidity Challenge](https://github.com/BuildsWithKing/30-
 ---
 
 **✅ Day 23 Project B Completed!**
+
