@@ -19,15 +19,7 @@ This project demonstrates secure Solidity development practices including **cust
 - [Testing](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day023A-SimpleBankX#-testing)
 - [Local Development](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day023A-SimpleBankX#%E2%80%8D-local-development)
 - [Deployment](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day023A-SimpleBankX#deployment)
-<<<<<<< HEAD
 - [License](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day023A-SimpleBankX#-license)
-<<<<<<< HEAD
-=======
-
-=======
-- [License](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day023A-SimpleBankX#-license)
->>>>>>> 0654a1b (Fix: renamed screenshoot to screenshot)
->>>>>>> recover-donationvaultv2
 - [Author](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day023A-SimpleBankX#%E2%80%8D-author)
 - [Project Journey](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day023A-SimpleBankX#%EF%B8%8F-project-journey)
 
@@ -228,3 +220,4 @@ While building SimpleBankX, I explored the challenge of safely refunding balance
 ---
 
 **✅ Day 23 Project A Completed!**
+
