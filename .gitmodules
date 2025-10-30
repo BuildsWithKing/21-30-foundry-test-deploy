@@ -28,3 +28,9 @@
 [submodule "Day023B-DonationVaultV2/lib/buildswithking-security"]
 	path = Day023B-DonationVaultV2/lib/buildswithking-security
 	url = https://github.com/BuildsWithKing/buildswithking-security
+[submodule "Day024A-BasicKycV2/lib/forge-std"]
+	path = Day024A-BasicKycV2/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "Day024A-BasicKycV2/lib/buildswithking-security"]
+	path = Day024A-BasicKycV2/lib/buildswithking-security
+	url = https://github.com/BuildsWithKing/buildswithking-security
