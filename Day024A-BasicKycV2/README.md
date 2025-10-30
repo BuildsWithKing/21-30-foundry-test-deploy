@@ -4,24 +4,23 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 
-# 🧑‍🤝‍🧑 BasicKycV2 — Modular On-chain KYC System (Day 24 Project A - 30 Days of Solidity Challenge) 👑
+# 🧑‍🤝‍🧑 BasicKycV2 — Modular On-chain KYC System (Day 24 Project A - 30 Days Of Solidity Challenge) 👑
 
 A modular and secure on-chain KYC (Know Your Customer) system that allows users to register, update, and view their identity data. Built with a layered architecture (BasicKycV2, KycManager, Utils, Types), full 100% test coverage, and strong access control between users, king and the admin. 
 
 ## Table Of Contents
-- [BasicKycV2 (Day 24 Project A - 30 Days Of Solidity)](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day024A-BasicKycV2#basickycv2-day-24-project-a---30-days-of-solidity-)
-- [Features](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day024A-BasicKycV2#-features)
-- [Project Summary](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day024A-BasicKycV2#%EF%B8%8F-project-summary)
-- [Project Structure](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day024A-BasicKycV2#-project-structure)
-- [Usage](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day024A-BasicKycV2#-usage)
-- [Contract Deployment](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day024A-BasicKycV2#-contract-deployment)
-- [Tools Used](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day024A-BasicKycV2#-tools-used)
-- [Testing](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day024A-BasicKycV2#-testing)
-- [Local Development](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day024A-BasicKycV2#%E2%80%8D-local-development)
-- [Deployment](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day024A-BasicKycV2#deployment)
-- [License](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day024A-BasicKycV2#-license)
-- [Author](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day024A-BasicKycV2#%E2%80%8D-author)
-
+- [BasicKycV2 — Modular On-chain KYC System (Day 24 Project A - 30 Days Of Solidity Challenge)](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/blob/main/Day024A-BasicKycV2/README.md#-basickycv2-day-24-project-a---30-days-of-solidity-)
+- [Features](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/blob/main/Day024A-BasicKycV2/README.md#-features)
+- [Project Summary](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/blob/main/Day024A-BasicKycV2/README.md#️-project-summary)
+- [Project Structure](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/blob/main/Day024A-BasicKycV2/README.md#-project-structure)
+- [Usage](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/blob/main/Day024A-BasicKycV2/README.md#-usage)
+- [Contract Deployment](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/blob/main/Day024A-BasicKycV2/README.md#-contract-deployment)
+- [Tools Used](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/blob/main/Day024A-BasicKycV2/README.md#-tools-used)
+- [Testing](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/blob/main/Day024A-BasicKycV2/README.md#-testing)
+- [Local Development](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/blob/main/Day024A-BasicKycV2/README.md#️-local-development)
+- [Deployment](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/blob/main/Day024A-BasicKycV2/README.md#deployment)
+- [License](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/blob/main/Day024A-BasicKycV2/README.md#-license)
+- [Author](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/blob/main/Day024A-BasicKycV2/README.md#️-author)
 ## Features
 - Users
   - RegisterMyData
@@ -226,4 +225,5 @@ Part of my [30 Days of Solidity Challenge](https://github.com/BuildsWithKing/30-
 ---
 
 ✅ Day 24 Project A Completed — BasicKycV2 Achieved Full Coverage!
+
 
