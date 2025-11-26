@@ -17,7 +17,7 @@ contract DeployModularVoterVault is Script {
         new ModularVoterVault(
             0x63c013128BF5C7628Fc8B87b68Aa90442AF312aa,
             0x922611b3EF6bE646198a071770e872D8e4cB4560,
-            0xdd8798097f92C01bc61566b6ad1Cc96fCeb76a21,
+            0x82B8002BF728dA892354D475d6B591AD01bD885f,
             50
         );
         vm.stopBroadcast();

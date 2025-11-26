@@ -14,7 +14,7 @@ contract DeployVoterVaultToken is Script {
     /// @notice Deploys the contract.
     function run() external {
         vm.startBroadcast();
-        new VoterVaultToken(0x63c013128BF5C7628Fc8B87b68Aa90442AF312aa, 100000000);
+        new VoterVaultToken(0x63c013128BF5C7628Fc8B87b68Aa90442AF312aa, 100000000 * 1e18);
         vm.stopBroadcast();
     }
 }

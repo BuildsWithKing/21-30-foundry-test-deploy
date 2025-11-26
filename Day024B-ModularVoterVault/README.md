@@ -182,11 +182,11 @@ assignAdmin(0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db)
 ## Contract Deployment
 
 **Network: Sepolia & Base Testnet** 
-- *Sepolia Token Contract Address*: 0x5Fc0EAcEfB37579857Ce93E3943e5873B4C7Cad6 
-- *Sepolia Contract Address*: 0xa12bc1721ac4f382d0192badc755b9390cb1ed27
-- *Base Token Contract Address*: 0xdd8798097f92C01bc61566b6ad1Cc96fCeb76a21   
-- *Base Contract Address*: 0xC8A6E01C3D28330a349fE05d69f34Ce4Cae0D16E 
-- [Sepolia Verified](https://sepolia.etherscan.io/address/0xa12bc1721ac4f382d0192badc755b9390cb1ed27) ✅  
+- *Sepolia Token Contract Address*: 0xD09666B74B52b6c6BAccdaEf4C829C83F5c6C836 
+- *Sepolia Contract Address*: 0xb44398c57e80aef2a0d95d561648c24a2e4a476e
+- *Base Token Contract Address*: 0x82B8002BF728dA892354D475d6B591AD01bD885f    
+- *Base Contract Address*:  
+- [Sepolia Verified](https://sepolia.etherscan.io/address/0xb44398c57e80aef2a0d95d561648c24a2e4a476e) ✅  
 - [Base Verified](https://sepolia.basescan.org/address/0xC8A6E01C3D28330a349fE05d69f34Ce4Cae0D16E) ✅  
 
 ## Tools Used 
@@ -238,7 +238,11 @@ forge snapshot
 ## Deployment
 Deployed via Foundry script:
 ```
+forge script script/DeployVoterVaultToken.s.sol --rpc-url $SEPOLIA_RPC_URL --private-key $PRIVATE_KEY --broadcast --verify 
+
 forge script script/DeployModularVoterVault.s.sol --rpc-url $SEPOLIA_RPC_URL --private-key $PRIVATE_KEY --broadcast --verify 
+
+forge script script/DeployVoterVaultToken.s.sol --rpc-url $BASE_RPC_URL --private-key $PRIVATE_KEY --broadcast --verify
 
 forge script script/DeployModularVoterVault.s.sol --rpc-url $BASE_RPC_URL --private-key $PRIVATE_KEY --broadcast --verify
 ```
