@@ -32,7 +32,7 @@ Focus: Refactor previous projects, write *Foundry tests, deploy smart contracts 
 | 021 | Project A — AdvancedUserStorage <br> Project B — ModularQuoteVault | Store & update full user data with CRUD & Foundry tests <br> A highly modular and secure quote vault with user data and quote management, fully tested and deployed. | [A View](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day021-AdvancedUserStorage) <br> [B View](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day021B-ModularQuoteVault) |
 | 022 | Project A — TodoListPlus <br> Project B — FlexiWhiteList | Add/remove/update tasks, enum status & tests <br> Address mapping with access control checks |[A View](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day022A-ToDoListPlus)  <br> [B View](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day022B-FlexiWhitelist) |
 | 023 | Project A — SimpleBankX <br> Project B — DonationVaultV2 | Register/unregister/deposit/withdraw/transfer ETH, refactor, and edge-case tests <br> Public donations, onlyKing withdrawals, reentrancy protected | [A View](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day023A-SimpleBankX) <br> [B View](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/blob/main/Day023B-DonationVaultV2) |
-| 024 | Project A — BasicKYCV2 <br> Project B — VotingApp | User registration, admin and king verification <br> Proposal creation, voting, tally validation & double-vote prevention | [A View](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day024A-BasicKycV2) <br> *Coming soon...* |
+| 024 | Project A — BasicKYCV2 <br> Project B — ModularVoterVault | User registration, admin and king verification <br> Proposal creation, voting with token, tally validation & double-vote prevention | [A View](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day024A-BasicKycV2) <br> [B View](https://github.com/BuildsWithKing/21-30-foundry-test-deploy/tree/main/Day024B-ModularVoterVault) |
 | 025 | Project A — OwnershipManager <br> Project B — ProjectIdeaStorage | Ownership transfer logic & admin validation <br> Store & update project ideas; test CRUD & access control |*Coming soon...* <br> *Coming soon...* |
 | 026 | Project A — NFTVault <br> Project B — ReferralSystem | Metadata & access tests; CRUD verification <br> Referral tracking & anti-abuse validation | *Coming soon...* <br> *Coming soon...* |
 | 027 | Project A — WalletGuard <br> Project B — DecentralizedPoll | Anti-attack & whitelist tests; security checks <br> Vote lifecycle tests & tally validation | *Coming soon...* <br> *Coming soon...* |
@@ -41,7 +41,7 @@ Focus: Refactor previous projects, write *Foundry tests, deploy smart contracts 
 | 030 | Capstone Project — Final Build | Combines patterns from all projects; full Foundry test suite, deployment & verification | *Coming soon...* |
 ---
 
-🧱 Progress: 3 / 10 projects done 
+🧱 Progress: 4 / 10 projects done 
 
 ---
 
