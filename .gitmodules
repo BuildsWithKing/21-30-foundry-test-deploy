@@ -34,3 +34,9 @@
 [submodule "Day024A-BasicKycV2/lib/buildswithking-security"]
 	path = Day024A-BasicKycV2/lib/buildswithking-security
 	url = https://github.com/BuildsWithKing/buildswithking-security
+[submodule "Day024B-ModularVoterVault/lib/forge-std"]
+	path = Day024B-ModularVoterVault/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "Day024B-ModularVoterVault/lib/buildswithking-security"]
+	path = Day024B-ModularVoterVault/lib/buildswithking-security
+	url = https://github.com/BuildsWithKing/buildswithking-security
