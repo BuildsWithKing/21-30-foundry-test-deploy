@@ -185,9 +185,9 @@ assignAdmin(0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db)
 - *Sepolia Token Contract Address*: 0xD09666B74B52b6c6BAccdaEf4C829C83F5c6C836 
 - *Sepolia Contract Address*: 0xb44398c57e80aef2a0d95d561648c24a2e4a476e
 - *Base Token Contract Address*: 0x82B8002BF728dA892354D475d6B591AD01bD885f    
-- *Base Contract Address*:  
+- *Base Contract Address*: 0xe22D793d0fAA1E00A18a77259d0b35B4C987d709 
 - [Sepolia Verified](https://sepolia.etherscan.io/address/0xb44398c57e80aef2a0d95d561648c24a2e4a476e) ✅  
-- [Base Verified](https://sepolia.basescan.org/address/0xC8A6E01C3D28330a349fE05d69f34Ce4Cae0D16E) ✅  
+- [Base Verified](https://sepolia.basescan.org/address/0xe22D793d0fAA1E00A18a77259d0b35B4C987d709) ✅  
 
 ## Tools Used 
 - Language: Solidity `0.8.30`
@@ -262,5 +262,6 @@ Part of [30 Days of Solidity Challenge](https://github.com/BuildsWithKing/30-day
 ⭐ If this project inspires you, please give it a star on GitHub — it fuels open-source innovation!
 
 ---
+
 
 ✅ Day 24 Project B Completed — ModularVoterVault Achieved Full Coverage!
